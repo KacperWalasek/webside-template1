@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<nav>
+		<button class="oneB">Strona Główna</button>
+		<button class="threeB">Sekcja2</button>
+		<button class="twoB">Sekcja1</button>
+	</nav>
+	<article class="wrapper">
+		<section>
+			<div class="side one"></div>
+		</section>
+		<section>
+			<div class="side two"></div>
+		</section>
+		<section>
+			<div class="side three"></div>
+		</section>
+	</article>
+	<script>
+		
+		var oneP=(-$(".one").offset().top);
+		var twoP=(-$(".two").offset().top);
+		var threeP=(-$(".three").offset().top);
+		$(".oneB").click(function() {$(".wrapper").css("top",oneP);});
+		$(".twoB").click(function() {$(".wrapper").css("top",twoP);});
+		$(".threeB").click(function() {$(".wrapper").css("top",threeP);});
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body{
+	background-color: #988;
+	margin: 0;
+	overflow: hidden;
+	
+}
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: rgba(50,50,50,0.2);
+	position: fixed;
+	z-index: 100;
+	
+}
+.wrapper{
+	
+	position: relative;
+	top: 0;
+	left: 0;
+	transition: all .5s ease-in-out;
+}
+.side{
+	
+	height: calc(100vh);
+}
+.one{
+
+}
+.two{
+	background-color: rgba(0,200,50,0.6);
+}
+.three{
+	background-color: rgba(50,0,200,0.6);
+}
+button{
+	background-color: rgba(0,0,0,0);
+	border: none;
+	color: white;
+	height: 100%;
+}
+button:hover{
+	background-color: rgba(50,50,50,0.3);
+	cursor: pointer;
+}
+button:focus{
+	outline: none;
+}
+.oneB{
+	float: left;
+}
+.twoB, .threeB{
+	float: right;
+}
