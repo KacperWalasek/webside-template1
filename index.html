@@ -23,13 +23,30 @@
 		</section>
 	</article>
 	<script>
-		
+		var str = 1;
 		var oneP=(-$(".one").offset().top);
 		var twoP=(-$(".two").offset().top);
 		var threeP=(-$(".three").offset().top);
-		$(".oneB").click(function() {$(".wrapper").css("top",oneP);});
-		$(".twoB").click(function() {$(".wrapper").css("top",twoP);});
-		$(".threeB").click(function() {$(".wrapper").css("top",threeP);});
+		$(".oneB").click(function() {$(".wrapper").css("top",oneP); str=1;});
+		$(".twoB").click(function() {$(".wrapper").css("top",twoP); str=2});
+		$(".threeB").click(function() {$(".wrapper").css("top",threeP); str=3;});
+		$(window).resize(function(){
+		
+			let dur = $(".wrapper").css("transition-duration");
+			$(".wrapper").css("transition-duration","0s");
+			$(".wrapper").css("top",oneP);
+			oneP=(-$(".one").offset().top);
+			twoP=(-$(".two").offset().top);
+			threeP=(-$(".three").offset().top);
+			
+			switch(str){
+			case 1: $(".wrapper").css("top",oneP); break;
+			case 2: $(".wrapper").css("top",twoP); break;
+			case 3: $(".wrapper").css("top",threeP); break;
+			}
+			
+			setTimeout(function(){$(".wrapper").css("transition-duration","0.5s");}, 100);
+		});
 	</script>
 </body>
 </html>
